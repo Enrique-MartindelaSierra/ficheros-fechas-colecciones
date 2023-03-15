@@ -78,7 +78,7 @@ import com.enrique.ficheros_fechas_colecciones.entities.Oferta;
 public class App {
 	static Scanner sc= new Scanner(System.in);
 	static Path ficheros = Paths.get("assets/ficheros");
-	static Path productos = Paths.get("assets/productosofertados.txt");
+	static Path productos = Paths.get("assets/productos-ofertados.txt");
 	static List<Cuenta> caixa = new ArrayList<>();
 	static List<Cuenta> sabadell = new ArrayList<>();
 	static List<Cuenta> santander = new ArrayList<>();
@@ -242,7 +242,7 @@ public class App {
 			if(oferta.isPresent()) {
 				tarjeta = oferta.get().getTarjeta();
 			}
-		}
+		
 			
 			
 			if(tarjeta!="0") {
@@ -257,6 +257,7 @@ public class App {
 				}else if(elegida.getPais().equals("EX")) {
 					System.out.println("Sorry, we can't offer you any products");
 				}
+				
 	
 			}
 			/*try (BufferedReader lector = new BufferedReader(new FileReader(productos.toFile()))) {
@@ -305,7 +306,7 @@ public class App {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		
+		}
 	}
 	
 	
